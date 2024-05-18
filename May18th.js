@@ -14,3 +14,7 @@ function evenOrOdd(number) {
   }
   return "Even";
 }
+
+function evenOrOdd2(number) {
+  return number % 2 === 0 ? "Even" : "Odd";
+}
