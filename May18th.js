@@ -31,5 +31,10 @@ function between(a, b) {
   return box;
 }
 
+function between2(a, b) {
+  const min = Math.min(a, b);
+  const max = Math.max(a, b);
 
-
+  for (var i = min, arr = []; i <= max; arr.push(i++));
+  return arr;
+}
