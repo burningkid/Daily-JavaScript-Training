@@ -18,3 +18,15 @@ function evenOrOdd(number) {
 function evenOrOdd2(number) {
   return number % 2 === 0 ? "Even" : "Odd";
 }
+
+// Complete the function that takes two integers (a, b, where a < b)
+// and return an array of all integers between the input parameters, including them.
+
+function between(a, b) {
+  let box = [];
+
+  for (let i = a; i <= b; i++) {
+    box.push(i);
+  }
+  return box;
+}
