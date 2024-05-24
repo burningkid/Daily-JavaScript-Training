@@ -3,3 +3,9 @@
 const stringToNumber = function (str) {
   return Number(str);
 };
+
+// another way:
+
+var stringToNumber = function (str) {
+  return +str;
+};
