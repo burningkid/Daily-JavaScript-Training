@@ -22,3 +22,25 @@ function squareDigits(num) {
 
   return Number(result);
 }
+
+// Other sol
+
+function squareDigits(num) {
+  return Number(
+    ("" + num)
+      .split("")
+      .map(function (val) {
+        return val * val;
+      })
+      .join("")
+  );
+}
+
+// other
+function squareDigits(num) {
+  return +num
+    .toString()
+    .split("")
+    .map((i) => i * i)
+    .join("");
+}
