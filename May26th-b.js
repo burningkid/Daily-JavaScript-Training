@@ -20,5 +20,5 @@ function squareDigits(num) {
     result += newArr[i];
   }
 
-  return result;
+  return Number(result);
 }
