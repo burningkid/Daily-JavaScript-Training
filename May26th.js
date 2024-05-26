@@ -23,3 +23,20 @@ var max = function (list) {
   console.log(max);
   return max;
 };
+
+// Math methods
+
+const min = (list) => Math.min(...list);
+const max = (list) => Math.max(...list);
+
+// sort
+
+var min = function (list) {
+  list.sort((a, b) => a - b);
+  return list[0];
+};
+
+var max = function (list) {
+  list.sort((a, b) => b - a);
+  return list[0];
+};
