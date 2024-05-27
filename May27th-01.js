@@ -7,15 +7,21 @@
 function isIsogram(str) {
   let myString = str.toLowerCase();
   let myLetters = myString.split("");
-  let seenLetters = new Set();
+  let newLetters = new Set();
   for (let i = 0; i < myLetters.length; i++) {
-    if (seenLetters.has(myLetters[i])) {
-      console.log("it has");
+    if (newLetters.has(myLetters[i])) {
+      console.log("it has.");
       return false;
     } else {
-      seenLetters.add(myLetters[i]);
+      newLetters.add(myLetters[i]);
     }
-    console.log("it false");
+    console.log("it doesn't.");
   }
   return true;
+}
+
+/// WOW
+
+function isIsogram(str) {
+  return new Set(str.toUpperCase()).size == str.length;
 }
