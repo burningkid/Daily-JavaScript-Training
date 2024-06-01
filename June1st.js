@@ -19,3 +19,29 @@ function reverseWords(str) {
 }
 
 // other ways
+
+function reverseWords(str) {
+  let reversedWord = str.split(" ");
+  let finalSentence = reversedWord
+    .map((word) => word.split("").reverse().join(""))
+    .join(" ");
+  return finalSentence;
+}
+
+// other way
+
+function reverseWords(str) {
+  return str
+    .split(" ")
+    .map(function (word) {
+      return word.split("").reverse().join("");
+    })
+    .join(" ");
+}
+
+// other way
+function reverseWords(str) {
+  // Go for it
+  //split words into seperate arrays
+  return str.split("").reverse().join("").split(" ").reverse().join(" ");
+}
