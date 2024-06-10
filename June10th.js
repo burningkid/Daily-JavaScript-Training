@@ -19,3 +19,9 @@ function smash(words) {
   }
   return sentence;
 }
+
+// Otgher ways
+
+smash = function (words) {
+  return words.join(" ");
+};
