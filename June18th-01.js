@@ -10,13 +10,21 @@
 function solution(str, ending) {
   const n = ending.length;
   console.log(str.slice(-n));
-  if (str.slice(-n) === ending) {
+  if (str.slice(0 - n) === ending) {
     return true;
   } else {
     return false;
   }
 }
 
+// Other way
+
 function solution(str, ending) {
   return str.endsWith(ending);
+}
+
+// other way
+
+function solution(str, ending) {
+  return str.slice(0 - ending.length) === ending;
 }
