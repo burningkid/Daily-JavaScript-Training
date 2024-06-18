@@ -6,3 +6,17 @@
 
 // solution('abc', 'bc') // returns true
 // solution('abc', 'd') // returns false
+
+function solution(str, ending) {
+  const n = ending.length;
+  console.log(str.slice(-n));
+  if (str.slice(-n) === ending) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function solution(str, ending) {
+  return str.endsWith(ending);
+}
