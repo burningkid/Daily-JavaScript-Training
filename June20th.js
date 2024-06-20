@@ -24,3 +24,11 @@ function addBinary(a, b) {
   }
   return arr.join("");
 }
+
+// Other ways
+
+function addBinary(a, b) {
+  return (a + b).toString(2);
+}
+
+// Other ways
