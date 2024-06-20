@@ -24,5 +24,3 @@ function addBinary(a, b) {
   }
   return arr.join("");
 }
-
-addBinary(5, 9);
