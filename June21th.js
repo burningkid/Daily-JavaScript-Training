@@ -7,3 +7,11 @@
 // [2334454,5] --> [5,2334454]
 // [1]         --> [1,1]
 
+function minMax(arr) {
+  arr.sort((a, b) => a - b);
+  let newArr = [];
+  newArr.push(arr[0], arr[arr.length - 1]);
+  return newArr;
+}
+
+// Other ways
