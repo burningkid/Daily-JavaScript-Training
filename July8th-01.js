@@ -9,15 +9,21 @@
 // "a234"   -->  false
 
 function validatePIN(pin) {
-  let array = pin.toString().split("").map(Number);
-  console.log(array);
-  if (array.length === 4 || array.length === 6) {
-    console.log("True");
-  } else {
-    console.log("False");
+  // Check if the length of the pin is either 4 or 6
+  if (pin.length !== 4 && pin.length !== 6) {
+    return false;
   }
 
-  return;
-}
+  // Convert the pin string to an array of numbers
+  let array = pin.toString().split("").map(Number);
 
-validatePIN("1214");
+  // Check if any of the elements in the array is NaN
+  for (let i = 0; i < array.length; i++) {
+    if (isNaN(array[i])) {
+      return false;
+    }
+  }
+
+  // If the length is correct and all elements are numbers, return true
+  return true;
+}
