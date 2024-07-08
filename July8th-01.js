@@ -7,3 +7,17 @@
 // "1234"   -->  true
 // "12345"  -->  false
 // "a234"   -->  false
+
+function validatePIN(pin) {
+  let array = pin.toString().split("").map(Number);
+  console.log(array);
+  if (array.length === 4 || array.length === 6) {
+    console.log("True");
+  } else {
+    console.log("False");
+  }
+
+  return;
+}
+
+validatePIN("1214");
