@@ -12,9 +12,10 @@
 
 function descendingOrder(n) {
   let arr = n
+    .toString()
     .split("")
     .map(Number)
     .sort((a, b) => b - a)
     .join("");
-  return arr;
+  return Number(arr);
 }
