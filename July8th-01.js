@@ -27,3 +27,13 @@ function validatePIN(pin) {
   // If the length is correct and all elements are numbers, return true
   return true;
 }
+
+// other ways
+
+function validatePIN(pin) {
+  // Regular expression to match exactly 4 or 6 digits
+  const pinRegex = /^(\d{4}|\d{6})$/;
+
+  // Test the pin against the regular expression
+  return pinRegex.test(pin);
+}
