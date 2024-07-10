@@ -37,3 +37,16 @@ function validatePIN(pin) {
   // Test the pin against the regular expression
   return pinRegex.test(pin);
 }
+
+// other ways
+function validatePIN(pin) {
+  var pinlen = pin.length;
+  var isCorrectLength = pinlen == 4 || pinlen == 6;
+  var hasOnlyNumbers = pin.match(/^\d+$/);
+
+  if (isCorrectLength && hasOnlyNumbers) {
+    return true;
+  }
+
+  return false;
+}
