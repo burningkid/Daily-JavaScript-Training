@@ -33,3 +33,7 @@ function nb_year(p0, percent, aug, p) {
 
   return years;
 }
+
+// other ways
+
+
