@@ -21,11 +21,15 @@
 
 // aug is an integer, percent a positive or null floating number, p0 and p are positive integers (> 0)
 
-function nbYear(p0, percent, aug, p) {
-  let population = 0;
-  let n = 0;
-  population = p0 * (p0 * percent) + aug;
-  n = Math.floor(p / population);
+function nb_year(p0, percent, aug, p) {
+  let years = 0;
+  percent = percent / 100;
 
-  return n;
+  while (p0 < p) {
+    p0 = p0 + p0 * percent + aug;
+    p0 = Math.floor(p0); // Ensure the population is always an integer
+    years++;
+  }
+
+  return years;
 }
