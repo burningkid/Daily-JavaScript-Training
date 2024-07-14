@@ -20,3 +20,22 @@ function disemvowel(str) {
 }
 
 // other ways
+
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, "");
+}
+
+// other ways
+
+disemvowel = (str) => str.replace(/[aeiou]/gi, "");
+
+// other ways
+
+const vowels = "aeiou";
+
+function disemvowel(str) {
+  return str
+    .split("")
+    .filter((letter) => !vowels.includes(letter.toLowerCase()))
+    .join("");
+}
