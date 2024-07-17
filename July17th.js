@@ -30,3 +30,7 @@ function findOdd(arr) {
 const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
 
 // other ways
+
+function findOdd(arr) {
+  return arr.find((item, index) => arr.filter((el) => el == item).length % 2);
+}
