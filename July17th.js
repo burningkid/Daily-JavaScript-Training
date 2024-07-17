@@ -34,3 +34,32 @@ const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
 function findOdd(arr) {
   return arr.find((item, index) => arr.filter((el) => el == item).length % 2);
 }
+
+// other wyas
+
+function findOdd(arr) {
+  var result,
+    num = 0;
+
+  arr = arr.sort();
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[i + 1]) {
+      num++;
+    } else {
+      num++;
+      if (num % 2 != 0) {
+        result = arr[i];
+        break;
+      }
+    }
+  }
+  return result;
+}
+
+// other ways
+
+function findOdd(A) {
+  return A.reduce(function (c, v) {
+    return c ^ v;
+  }, 0);
+}
