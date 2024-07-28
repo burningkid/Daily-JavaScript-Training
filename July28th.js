@@ -22,3 +22,8 @@ function friend(friends) {
   return output;
 }
 
+// other way
+
+function friend(friends) {
+  return friends.filter((n) => n.length === 4);
+}
