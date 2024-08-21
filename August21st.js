@@ -25,4 +25,3 @@ String.prototype.toJadenCase = function () {
 
   return arr.join(" ");
 };
-    
