@@ -13,3 +13,16 @@
 
 // Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+
+String.prototype.toJadenCase = function () {
+  let words = this.split(" "); // Use 'this' to refer to the string instance
+  let arr = [];
+
+  for (let i = 0; i < words.length; i++) {
+    let capitalWord = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+    arr.push(capitalWord);
+  }
+
+  return arr.join(" ");
+};
+    
