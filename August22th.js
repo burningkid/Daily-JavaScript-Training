@@ -25,7 +25,35 @@ function duplicateEncode(word) {
   return result;
 }
 
-// Example usage:
-console.log(duplicateEncode("Success")); // Output: ")())())"
-console.log(duplicateEncode("recede")); // Output: "()()()"
-console.log(duplicateEncode("(( @")); // Output: "))(("
+// // Example usage:
+// console.log(duplicateEncode("Success")); // Output: ")())())"
+// console.log(duplicateEncode("recede")); // Output: "()()()"
+// console.log(duplicateEncode("(( @")); // Output: "))(("
+
+// more readable way
+
+function duplicateEncode(word) {
+  let letters = word.toLowerCase().split("");
+
+  let charCount = {};
+
+  for (let char of letters) {
+    if (charCount[char] === undefined) {
+      charCount[char] = 1;
+    } else {
+      charCount[char] += 1;
+    }
+
+    console.log(charCount);
+  }
+
+  let result = "";
+  for (let char of letters) {
+    if (charCount[char] > 1) {
+      result += ")";
+    } else {
+      result += "(";
+    }
+  }
+  return result;
+}
