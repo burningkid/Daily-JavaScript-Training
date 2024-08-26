@@ -25,3 +25,9 @@ function arrayDiff(a, b) {
 
   return result;
 }
+
+// other way
+
+function arrayDiff(a, b) {
+  return a.filter((value) => !b.includes(value));
+}
