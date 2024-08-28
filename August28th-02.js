@@ -12,3 +12,11 @@ function noSpace(x) {
 }
 
 // other way
+
+function noSpace(x) {
+  return x.replace(/\s/g, "");
+}
+
+// other way
+
+
