@@ -10,3 +10,27 @@
 // "aA11" -> 2 # 'a' and '1'
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
 
+function duplicateCount(text) {
+  // Convert the string to lowercase and split it into an array
+  let array = text.toLowerCase().split("");
+  let obj = {};
+  let count = 0;
+
+  // Count the occurrences of each character
+  for (let i = 0; i < array.length; i++) {
+    if (obj[array[i]] === undefined) {
+      obj[array[i]] = 1;
+    } else {
+      obj[array[i]] += 1;
+    }
+  }
+
+  // Count the characters that occur more than once
+  for (let key in obj) {
+    if (obj[key] > 1) {
+      count++;
+    }
+  }
+
+  return count;
+}
