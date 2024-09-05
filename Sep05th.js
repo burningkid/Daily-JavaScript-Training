@@ -9,3 +9,9 @@
 function getAge(inputString) {
   return +inputString.split("")[0];
 }
+
+// other way
+
+function getAge(inputString) {
+  return parseInt(inputString);
+}
