@@ -8,4 +8,4 @@ function solution(str) {
 
 // Other ways
 
-
+const solution = (s) => [...s].reverse().join("");
